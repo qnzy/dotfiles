@@ -1,33 +1,44 @@
 [submodule "vim/bundle/ack"]
 	path = vim/bundle/ack
 	url = git://github.com/vim-scripts/ack.vim.git
+        ignore = untracked
 [submodule "vim/bundle/ctrlp"]
 	path = vim/bundle/ctrlp
 	url = git://github.com/vim-scripts/ctrlp.vim.git
+        ignore = untracked
 [submodule "vim/bundle/fugitive"]
 	path = vim/bundle/fugitive
 	url = git://github.com/vim-scripts/fugitive.vim.git
+        ignore = untracked
 [submodule "vim/bundle/Command-T"]
 	path = vim/bundle/Command-T
 	url = git://github.com/vim-scripts/Command-T.git
+        ignore = untracked
 [submodule "vim/bundle/pyflakes"]
 	path = vim/bundle/pyflakes
 	url = git://github.com/vim-scripts/pyflakes.git
+        ignore = untracked
 [submodule "vim/bundle/Tagbar"]
 	path = vim/bundle/Tagbar
 	url = git://github.com/vim-scripts/Tagbar.git
+        ignore = untracked
 [submodule "vim/bundle/Solarized"]
 	path = vim/bundle/Solarized
 	url = git://github.com/vim-scripts/Solarized.git
+        ignore = untracked
 [submodule "vim/bundle/snipMate"]
 	path = vim/bundle/snipMate
 	url = git://github.com/vim-scripts/snipMate.git
+        ignore = untracked
 [submodule "vim/bundle/The-NERD-tree"]
 	path = vim/bundle/The-NERD-tree
 	url = git://github.com/vim-scripts/The-NERD-tree.git
+        ignore = untracked
 [submodule "vim/bundle/tComment"]
 	path = vim/bundle/tComment
 	url = git://github.com/vim-scripts/tComment.git
+        ignore = untracked
 [submodule "vim/bundle/CRefVim"]
 	path = vim/bundle/CRefVim
 	url = git://github.com/vim-scripts/CRefVim.git
+        ignore = untracked

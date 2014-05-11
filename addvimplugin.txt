@@ -1,2 +1,4 @@
 git submodule add git://github.com/vim-scripts/tComment.git vim/bundle/tComment
 git submodule init && git submodule update
+
+add "ignore = untracked" in the .gitmodules file for the submodule
