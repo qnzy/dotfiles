@@ -1,0 +1,6 @@
+alias vim='gvim'
+alias m='less'
+alias more='less'
+alias ll='ls -l'
+alias h='history'
+alias cd..='cd ..'

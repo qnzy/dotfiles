@@ -1,7 +1,51 @@
-"call pathogen#runtime_append_all_bundles()
+" automatically reload vimrc when it's saved
+au BufWritePost .vimrc so ~/.vimrc
+
+let mapleader="," " leader is comma
+syntax enable " enable syntax highlighting
+
+set tabstop=4 " number of visual spaces per TAB
+set softtabstop=4 " number of spaces in tab when editing
+set expandtab " tabs are spaces
+set number " show line numbers
+set showcmd " show command in bottom bar
+set cursorline " highlight current line
+set wildmenu " visual autocomplete
+set lazyredraw " redraw only when we need to
+set showmatch " highlight matching [{()}]
+set incsearch " incremental search
+set colorcolumn=80 " highlight colum 80
+
+" CtrlP settings
+let g:ctrlp_max_files=0
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_by_filename = 1
+
+" move vertically by visual line
+nnoremap j gj 
+nnoremap k gk
+" move to beginning/end of line
+nnoremap B ^
+nnoremap E $ 
+" Ack
+nnoremap <leader>a :Ack 
+
+" better indent
+vnoremap < <gv 
+vnoremap > >gv
+
+" easy split navigation
+nnoremap <C-h> <C-w> h
+nnoremap <C-j> <C-j> h
+nnoremap <C-k> <C-k> h
+nnoremap <C-l> <C-l> h
+
+" pathogen
 call pathogen#infect()
 call pathogen#helptags()
 
+" colorscheme
 set background=dark
 let g:solarized_termtrans=1
 let g:solarized_termcolors=256
@@ -9,3 +53,25 @@ let g:solarized_contrast="high"
 let g:solarized_visibility="high"
 colorscheme solarized
 
+" Tagbar
+nmap <F8> : TagbarToggle<CR>
+let g:tagbar_type_vhdl = {
+    \ 'ctagstype': 'vhdl',
+    \ 'kinds' : [
+        \'d:prototypes',
+        \'b:package bodies',
+        \'e:entities',
+        \'a:architectures',
+        \'t:types',
+        \'p:processes',
+        \'f:functions',
+        \'r:procedures',
+        \'c:constants',
+        \'T:subtypes',
+        \'r:records',
+        \'C:components',
+        \'P:packages',
+        \'l:locals',
+        \'s:signals'
+    \]
+\}
