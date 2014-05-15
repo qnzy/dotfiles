@@ -13,33 +13,49 @@ set cursorline " highlight current line
 set wildmenu " visual autocomplete
 set lazyredraw " redraw only when we need to
 set showmatch " highlight matching [{()}]
-set incsearch " incremental search
 set colorcolumn=80 " highlight colum 80
+set tags=./tags,tags;
+set ignorecase
+set smartcase
 
 " CtrlP settings
 let g:ctrlp_max_files=0
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_by_filename = 1
+let g:ctrlp_match_window = 'bottom,order:ttb'
+let g:ctrlp_switch_buffer = 0
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 
 " move vertically by visual line
-nnoremap j gj 
+nnoremap j gj
 nnoremap k gk
+
+" quick escape
+inoremap jj <esc>
+
 " move to beginning/end of line
 nnoremap B ^
-nnoremap E $ 
+nnoremap E $
+
+" remove search highlighting
+nnoremap <leader><space> :nohlsearch<CR>
+set hlsearch " highlight matches
+set incsearch " incremental search
+
 " Ack
-nnoremap <leader>a :Ack 
+nnoremap <leader>a :Ag 
 
 " better indent
 vnoremap < <gv 
 vnoremap > >gv
 
 " easy split navigation
-nnoremap <C-h> <C-w> h
-nnoremap <C-j> <C-j> h
-nnoremap <C-k> <C-k> h
-nnoremap <C-l> <C-l> h
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
 
 " pathogen
 call pathogen#infect()
@@ -75,3 +91,4 @@ let g:tagbar_type_vhdl = {
         \'s:signals'
     \]
 \}
+

@@ -1,4 +1,4 @@
-alias vim='gvim'
+#alias vim='gvim'
 alias m='less'
 alias more='less'
 alias ll='ls -l'
