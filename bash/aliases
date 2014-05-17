@@ -1,6 +1,7 @@
 #alias vim='gvim'
 alias m='less'
 alias more='less'
-alias ll='ls -l'
+alias ll='ls -lah'
 alias h='history'
 alias cd..='cd ..'
+alias code='cd ~/code'

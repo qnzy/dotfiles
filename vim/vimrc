@@ -50,11 +50,13 @@ set incsearch " incremental search
 " toggle quickfix
 nnoremap <leader>q :cw<CR>
 
-" make
-nnoremap <leader>m :w<CR>:make<CR>:cw<CR>
+" save, make, quickfix
+"nnoremap <leader>m :w<CR>:make<CR>:cw<CR>
+" nnoremap <leader>m :w<CR>:silent make<CR>:cw<CR>
+nnoremap <leader>m :w\|silent make\|redraw!\|cw<CR>
 
 " switch buffer (use tab expand)
-nnoremap <leader>b :buf 
+nnoremap <leader>, :buf 
 
 " Ack
 nnoremap <leader>a :Ag 
