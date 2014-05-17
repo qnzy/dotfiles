@@ -1,5 +1,5 @@
 " automatically reload vimrc when it's saved
-au BufWritePost .vimrc so ~/.vimrc
+"au BufWritePost .vimrc so ~/.vimrc
 
 let mapleader="," " leader is comma
 syntax enable " enable syntax highlighting
@@ -17,6 +17,9 @@ set colorcolumn=80 " highlight colum 80
 set tags=./tags,tags;
 set ignorecase
 set smartcase
+set autoindent
+"set smartindent
+set cindent
 
 " CtrlP settings
 let g:ctrlp_max_files=0
@@ -43,6 +46,15 @@ nnoremap E $
 nnoremap <leader><space> :nohlsearch<CR>
 set hlsearch " highlight matches
 set incsearch " incremental search
+
+" toggle quickfix
+nnoremap <leader>q :cw<CR>
+
+" make
+nnoremap <leader>m :w<CR>:make<CR>:cw<CR>
+
+" switch buffer (use tab expand)
+nnoremap <leader>b :buf 
 
 " Ack
 nnoremap <leader>a :Ag 
