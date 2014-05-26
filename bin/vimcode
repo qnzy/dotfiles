@@ -1,0 +1,14 @@
+SESSIONNAME="VIMCODE"
+
+tmux has-session -t $SESSIONNAME $&gt; /dev/null
+if [ $? != 0 ]
+    then
+        tmux new-session -s $SESSIONNAME -d
+        tmux send-keys 'cd ~/code && vim' 'C-m'
+        tmux new-window
+        tmux new-window
+        tmux send-keys 'octave' 'C-m'
+        tmux select-window -t $SESSIONNAME:0
+fi
+
+tmux attach -t $SESSIONNAME

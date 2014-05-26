@@ -1,9 +1,12 @@
 " automatically reload vimrc when it's saved
 "au BufWritePost .vimrc so ~/.vimrc
 
+set nocompatible
+
 let mapleader="," " leader is comma
 syntax enable " enable syntax highlighting
 
+set hidden " allow hidden unsaved buffers
 set tabstop=4 " number of visual spaces per TAB
 set softtabstop=4 " number of spaces in tab when editing
 set expandtab " tabs are spaces
@@ -33,19 +36,27 @@ let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 
 " move vertically by visual line
 nnoremap j gj
-nnoremap k gk
+noremap k gk
 
 " quick escape
 inoremap jj <esc>
+
+" replace word under cursor
+:nnoremap <leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
 
 " move to beginning/end of line
 nnoremap B ^
 nnoremap E $
 
+let g:snippets_dir='~/.vim/snippets/'
+
 " remove search highlighting
 nnoremap <leader><space> :nohlsearch<CR>
 set hlsearch " highlight matches
 set incsearch " incremental search
+
+" toggle NerdTree
+nnoremap <leader>e :NERDTreeToggle<CR>
 
 " toggle quickfix
 nnoremap <leader>q :cw<CR>
@@ -68,6 +79,10 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+" set list listchars=tab:\ \ ,trail:·
+set list
+set listchars=tab:>.,trail:.,extends:#,nbsp:.
 
 " pathogen
 call pathogen#infect()
