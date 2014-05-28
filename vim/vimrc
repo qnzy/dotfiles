@@ -13,8 +13,8 @@ set expandtab " tabs are spaces
 set number " show line numbers
 set showcmd " show command in bottom bar
 set cursorline " highlight current line
-set wildmenu " visual autocomplete
-set lazyredraw " redraw only when we need to
+"set wildmenu " visual autocomplete
+" set lazyredraw " redraw only when we need to
 set showmatch " highlight matching [{()}]
 set colorcolumn=80 " highlight colum 80
 set tags=./tags,tags;
@@ -34,6 +34,12 @@ let g:ctrlp_switch_buffer = 0
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 
+" YCM settings
+let g:ycm_confirm_extra_conf = 0
+
+" snipMate settings
+let g:snippets_dir='~/.vim/snippets/'
+
 " move vertically by visual line
 nnoremap j gj
 noremap k gk
@@ -47,8 +53,6 @@ inoremap jj <esc>
 " move to beginning/end of line
 nnoremap B ^
 nnoremap E $
-
-let g:snippets_dir='~/.vim/snippets/'
 
 " remove search highlighting
 nnoremap <leader><space> :nohlsearch<CR>
@@ -95,6 +99,15 @@ let g:solarized_termcolors=256
 let g:solarized_contrast="high"
 let g:solarized_visibility="high"
 colorscheme solarized
+" color solarized
+" highlight Pmenu guibg=brown gui=bold
+" hi Pmenu guifg=#000000 guibg=#F8F8F8 ctermfg=black ctermbg=Lightgray
+" hi PmenuSbar guifg=#8A95A7 guibg=#F8F8F8 gui=NONE ctermfg=darkcyan ctermbg=lightgray cterm=NONE
+" hi PmenuThumb guifg=#F8F8F8 guibg=#8A95A7 gui=NONE ctermfg=lightgray ctermbg=darkcyan cterm=NONE
+" highlight Pmenu ctermbg=13 guibg=DarkBlue
+" highlight PmenuSel ctermbg=7 guibg=DarkBlue guifg=LightBlue
+" highlight PmenuSbar ctermbg=7 guibg=DarkGray
+" highlight PmenuThumb guibg=Black
 
 " Tagbar
 nmap <F8> : TagbarToggle<CR>

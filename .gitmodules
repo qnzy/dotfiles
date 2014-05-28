@@ -42,8 +42,15 @@
 	path = vim/bundle/ag
 	url = git://github.com/vim-scripts/ag.vim.git
         ignore = untracked
-
 [submodule "vim/bundle/vim-tmux-navigator"]
 	path = vim/bundle/vim-tmux-navigator
 	url = git://github.com/christoomey/vim-tmux-navigator.git
+        ignore = untracked
+[submodule "vim/bundle/YouCompleteMe"]
+	path = vim/bundle/YouCompleteMe
+	url = git://github.com/Valloric/YouCompleteMe.git
+        ignore = untracked
+[submodule "vim/bundle/Syntastic"]
+	path = vim/bundle/Syntastic
+	url = git://github.com/vim-scripts/Syntastic.git
         ignore = untracked
