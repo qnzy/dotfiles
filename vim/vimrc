@@ -13,7 +13,7 @@ set expandtab " tabs are spaces
 set number " show line numbers
 set showcmd " show command in bottom bar
 set cursorline " highlight current line
-"set wildmenu " visual autocomplete
+set wildmenu " visual autocomplete
 " set lazyredraw " redraw only when we need to
 set showmatch " highlight matching [{()}]
 set colorcolumn=80 " highlight colum 80
@@ -40,8 +40,12 @@ let g:ycm_confirm_extra_conf = 0
 " Syntastic settings
 let g:syntastic_aggregate_errors = 1
 let g:syntastic_c_compiler = 'clang'
-let g:syntastic_c_checkers=['gcc', 'cppcheck']
-let g:syntastic_cpp_checkers=['gcc', 'cppcheck']
+let g:syntastic_c_checkers=['gcc','cppcheck','splint']
+let g:syntastic_cpp_checkers=['gcc','cppcheck']
+let g:syntastic_python_checkers=['pylint','pyflakes']
+let g:syntastic_vhdl_checkers=['ghdl']
+let g:syntastic_html_checkers=['tidy']
+let g:syntastic_tex_checkers=['chktex']
 
 " snipMate settings
 let g:snippets_dir='~/.vim/snippets/'
