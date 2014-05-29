@@ -54,3 +54,7 @@
 	path = vim/bundle/Syntastic
 	url = git://github.com/vim-scripts/Syntastic.git
         ignore = untracked
+[submodule "vim/bundle/sparkup"]
+	path = vim/bundle/sparkup
+	url = git://github.com/rstacruz/sparkup.git
+        ignore = untracked
