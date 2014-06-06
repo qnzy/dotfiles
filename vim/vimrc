@@ -38,8 +38,10 @@ let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 let g:ycm_confirm_extra_conf = 0
 
 " Syntastic settings
+let g:syntastic_check_on_open =1
 let g:syntastic_aggregate_errors = 1
 let g:syntastic_c_compiler = 'clang'
+let g:syntastic_c_compiler_options='--analyze'
 let g:syntastic_c_checkers=['gcc','cppcheck','splint']
 let g:syntastic_cpp_checkers=['gcc','cppcheck']
 let g:syntastic_python_checkers=['pylint','pyflakes']
