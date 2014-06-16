@@ -1,2 +1,8 @@
-(use readline irregex)
+(use 
+ readline 
+ irregex 
+ srfi-1 
+ srfi-13 
+ srfi-69
+ srfi-37)
 (current-input-port (make-gnu-readline-port))

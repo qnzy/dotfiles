@@ -58,3 +58,11 @@
 	path = vim/bundle/sparkup
 	url = git://github.com/rstacruz/sparkup.git
         ignore = untracked
+[submodule "vim/bundle/fireplace"]
+	path = vim/bundle/fireplace
+	url = https://github.com/tpope/vim-fireplace.git
+    ignore=untracked
+[submodule "vim/bundle/vim-clojure-static"]
+	path = vim/bundle/vim-clojure-static
+	url = https://github.com/guns/vim-clojure-static.git
+    ignore=untracked
