@@ -3,6 +3,7 @@ if [ -f ~/.bash_aliases ]; then
 fi
 
 PATH=~/bin:$PATH
+PATH=~/code/android-sdk/tools:~/code/android-sdk/platform-tools:$PATH
 
 export IGNOREEOF=4
 
