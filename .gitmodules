@@ -69,3 +69,4 @@
 [submodule "vim/bundle/vim-slime"]
 	path = vim/bundle/vim-slime
 	url = git://github.com/jpalardy/vim-slime.git
+    ignore=untracked
