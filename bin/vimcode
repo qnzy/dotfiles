@@ -9,6 +9,7 @@ if [ $? != 0 ]
         tmux new-window
         tmux new-window
         tmux send-keys 'octave' 'C-m'
+        tmux select-window -t $SESSIONNAME:1
         tmux select-window -t $SESSIONNAME:0
 fi
 

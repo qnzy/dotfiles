@@ -1,0 +1,18 @@
+SESSIONNAME="CHICKEN"
+
+tmux has-session -t $SESSIONNAME $&gt; /dev/null
+if [ $? != 0 ]
+    then
+        tmux new-session -s $SESSIONNAME -d
+        tmux send-keys 'vim' 'C-m'
+        tmux split-window
+        tmux send-keys 'csi' 'C-m'
+        tmux select-pane -U
+        tmux select-layout main-horizontal
+        sleep 1
+        tmux send-keys C-c v
+        tmux send-keys 'C-m' '0.1' 'C-m'
+
+fi
+
+tmux attach -t $SESSIONNAME
