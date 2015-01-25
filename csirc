@@ -5,4 +5,5 @@
  srfi-13 
  srfi-69
  srfi-37)
+(use numbers)
 (current-input-port (make-gnu-readline-port))

@@ -1,6 +1,6 @@
 SESSIONNAME="VIMCODE"
 
-tmux has-session -t $SESSIONNAME $&gt; /dev/null
+tmux has-session -t $SESSIONNAME > /dev/null
 if [ $? != 0 ]
     then
         tmux new-session -s $SESSIONNAME -d

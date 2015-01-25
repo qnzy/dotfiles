@@ -1,14 +1,19 @@
-SESSIONNAME="CHICKEN"
-cd ~/code/scheme
+SESSIONNAME="VIMPYTHON"
+cd ~/code/python
 tmux has-session -t $SESSIONNAME > /dev/null
 if [ $? != 0 ]
     then
         echo "creating new session"
         tmux new-session -s $SESSIONNAME -d
         tmux send-keys 'vim' 'C-m'
+        tmux send-keys ':set filetype:python' 'C-m'
         tmux split-window
-        tmux send-keys 'csi' 'C-m'
+        tmux send-keys 'ipython' 'C-m'
         tmux select-pane -U
+#        tmux select-layout main-horizontal
+#        sleep 1
+#        tmux send-keys C-c v
+#        tmux send-keys 'C-m' '0.1' 'C-m'
 fi
 
 tmux attach -t $SESSIONNAME
