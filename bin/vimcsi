@@ -1,4 +1,4 @@
-SESSIONNAME="CHICKEN"
+SESSIONNAME="VIMCSI"
 cd ~/code/scheme
 tmux has-session -t $SESSIONNAME > /dev/null
 if [ $? != 0 ]

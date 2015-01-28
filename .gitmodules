@@ -78,3 +78,7 @@
 	path = vim/bundle/vim-indent-object
 	url = https://github.com/vim-scripts/vim-indent-object.git
     ignore=untracked
+[submodule "vim/bundle/vim-javascript"]
+	path = vim/bundle/vim-javascript
+	url = https://github.com/pangloss/vim-javascript.git
+    ignore=untracked
