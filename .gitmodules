@@ -40,7 +40,8 @@
         ignore = untracked
 [submodule "vim/bundle/ag"]
 	path = vim/bundle/ag
-	url = git://github.com/vim-scripts/ag.vim.git
+#	url = git://github.com/vim-scripts/ag.vim.git
+	url= https://github.com/rking/ag.vim.git
         ignore = untracked
 [submodule "vim/bundle/vim-tmux-navigator"]
 	path = vim/bundle/vim-tmux-navigator

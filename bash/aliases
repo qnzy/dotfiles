@@ -6,6 +6,8 @@ alias h='history'
 alias cd..='cd ..'
 alias code='cd ~/code'
 alias cppcheck='cppcheck --enable=style -q'
+alias dropbox='~/.dropbox-dist/dropboxd'
+
 #alias android-connect='mtpfs -o allow_other /media/Nexus'
 #alias android-disconnect='fusermount -u /media/Nexus'
 #alias check50="/usr/bin/nodejs ~/cs50/check50-master/SOURCES/opt/check50/bin/check50.js"
