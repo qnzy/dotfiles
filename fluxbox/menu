@@ -5,6 +5,7 @@
 [exec] (Terminal) {/usr/bin/xfce4-terminal}
 [exec] (Firefox) {/usr/bin/firefox}
 [exec] (VIM) { x-terminal-emulator -T "VIM" -e /usr/bin/vim }
+[exec] (Thunar) {/usr/bin/thunar}
 [submenu] (vim-tmux)
     [exec] (vimcsi) { cd ~/code/scheme && x-terminal-emulator -T "VIMCSI" -e ~/bin/vimcsi}
     [exec] (vimpython) { cd ~/code/python && x-terminal-emulator -T "VIMPYTHON" -e ~/bin/vimpython}
@@ -15,16 +16,18 @@
     [exec] (PARI/GP) { x-terminal-emulator -T "PARI/GP" -e /usr/bin/gp}
     [exec] (wxMaxima) {/usr/bin/wxmaxima}
 [end]
-[exec] (Thunar) {/usr/bin/thunar}
-[submenu] (Libre Office)
-    [exec] (LibreOffice Writer) {/usr/bin/libreoffice --writer} </usr/share/icons/hicolor/32x32/apps/libreoffice-writer.xpm>
-    [exec] (LibreOffice Calc) {/usr/bin/libreoffice --calc} </usr/share/icons/hicolor/32x32/apps/libreoffice-calc.xpm>
-    [exec] (LibreOffice Impress) {/usr/bin/libreoffice --impress} </usr/share/icons/hicolor/32x32/apps/libreoffice-impress.xpm>
-[end]
 [submenu] (other apps)
     [exec] (KICAD) {/usr/bin/kicad}
     [exec] (GQRX) {/usr/bin/gqrx}
     [exec] (Bitwig Studio) {/usr/bin/bitwig-studio}
+    [exec] (Inkscape) {/usr/bin/inkscape}
+    [exec] (Gimp) {/usr/bin/gimp}
+    [exec] (DarkTable) {/usr/bin/darktable}
+    [submenu] (Libre Office)
+        [exec] (LibreOffice Writer) {/usr/bin/libreoffice --writer} </usr/share/icons/hicolor/32x32/apps/libreoffice-writer.xpm>
+        [exec] (LibreOffice Calc) {/usr/bin/libreoffice --calc} </usr/share/icons/hicolor/32x32/apps/libreoffice-calc.xpm>
+        [exec] (LibreOffice Impress) {/usr/bin/libreoffice --impress} </usr/share/icons/hicolor/32x32/apps/libreoffice-impress.xpm>
+    [end]
 [end]
 #[submenu] (fluxbox)
 #    [config] (Configuration)
