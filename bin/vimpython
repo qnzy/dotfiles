@@ -1,5 +1,5 @@
 SESSIONNAME="VIMPYTHON"
-cd ~/code/python
+#cd ~/code/python
 tmux has-session -t $SESSIONNAME > /dev/null
 if [ $? != 0 ]
     then
