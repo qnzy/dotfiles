@@ -26,15 +26,15 @@
     [exec] (GQRX) {/usr/bin/gqrx}
     [exec] (Bitwig Studio) {/usr/bin/bitwig-studio}
 [end]
+#[submenu] (fluxbox)
+#    [config] (Configuration)
+#    [reconfig] (Reconfigure)
+#    [submenu] (Styles) {}
+#       [stylesdir] (/usr/share/fluxbox/styles)
+#       [stylesdir] (~/.fluxbox/styles)
+#    [end]
+#[end]
 #[workspaces] (Workspaces)
-[submenu] (fluxbox)
-    [config] (Configuration)
-    [reconfig] (Reconfigure)
-    [submenu] (Styles) {}
-       [stylesdir] (/usr/share/fluxbox/styles)
-       [stylesdir] (~/.fluxbox/styles)
-    [end]
-[end]
 [exit] (Exit)
 
 # [config] (Configuration)
