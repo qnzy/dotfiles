@@ -43,7 +43,9 @@ let g:ctrlp_working_path_mode = 0
 let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 
 " YCM settings
+let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
 let g:ycm_confirm_extra_conf = 0
+autocmd CompleteDone * pclose
 
 " Syntastic settings
 let g:syntastic_check_on_open =1
@@ -57,6 +59,7 @@ let g:syntastic_vhdl_checkers=['ghdl']
 let g:syntastic_html_checkers=['tidy']
 let g:syntastic_tex_checkers=['chktex']
 let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_enable_signs = 0
 
 " snipMate settings
 let g:snippets_dir='~/.vim/snippets/'
@@ -66,7 +69,7 @@ nnoremap j gj
 noremap k gk
 
 " quick escape
-inoremap jj <esc>
+inoremap jk <esc>
 
 " replace word under cursor
 :nnoremap <leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
