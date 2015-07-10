@@ -31,7 +31,7 @@ set cursorline " highlight current line
 set wildmenu " visual autocomplete
 " set lazyredraw " redraw only when we need to
 set showmatch " highlight matching [{()}]
-set colorcolumn=80 " highlight colum 80
+"set colorcolumn=80 " highlight colum 80
 set tags=./tags,tags;
 set ignorecase
 set smartcase
@@ -45,21 +45,23 @@ let g:is_chicken=1
 "vim-slime config
 let g:slime_target="tmux"
 let g:slime_python_ipython=1
+let g:slime_paset_file = "$HOME/.slime_pase"
+let g:slime_default_config = {"socket_name":"default","target_pane":"1"}
 
 " CtrlP settings
-let g:ctrlp_max_files=0
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_by_filename = 1
-let g:ctrlp_match_window = 'bottom,order:ttb'
-let g:ctrlp_switch_buffer = 0
-let g:ctrlp_working_path_mode = 0
-let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
+"let g:ctrlp_max_files=0
+"let g:ctrlp_map = '<c-p>'
+"let g:ctrlp_cmd = 'CtrlP'
+"let g:ctrlp_by_filename = 1
+"let g:ctrlp_match_window = 'bottom,order:ttb'
+"let g:ctrlp_switch_buffer = 0
+"let g:ctrlp_working_path_mode = 0
+"let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 
 " YCM settings
-let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
-let g:ycm_confirm_extra_conf = 0
-autocmd CompleteDone * pclose
+"let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
+"let g:ycm_confirm_extra_conf = 0
+"autocmd CompleteDone * pclose
 
 " Syntastic settings
 let g:syntastic_check_on_open =1
@@ -74,9 +76,6 @@ let g:syntastic_html_checkers=['tidy']
 let g:syntastic_tex_checkers=['chktex']
 let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_enable_signs = 0
-
-" snipMate settings
-let g:snippets_dir='~/.vim/snippets/'
 
 " move vertically by visual line
 nnoremap j gj
@@ -104,9 +103,6 @@ nnoremap <leader>m :w\|silent make\|redraw!\|cw<CR>
 
 " switch buffer (use tab expand)
 nnoremap <leader>, :buf 
-
-" Ag
-nnoremap <leader>a :Ag 
 
 " better indent
 vnoremap < <gv 
@@ -138,27 +134,4 @@ let g:solarized_visibility="high"
 " highlight PmenuSel ctermbg=7 guibg=DarkBlue guifg=LightBlue
 " highlight PmenuSbar ctermbg=7 guibg=DarkGray
 " highlight PmenuThumb guibg=Black
-
-" Tagbar
-nmap <F8> : TagbarToggle<CR>
-let g:tagbar_type_vhdl = {
-    \ 'ctagstype': 'vhdl',
-    \ 'kinds' : [
-        \'d:prototypes',
-        \'b:package bodies',
-        \'e:entities',
-        \'a:architectures',
-        \'t:types',
-        \'p:processes',
-        \'f:functions',
-        \'r:procedures',
-        \'c:constants',
-        \'T:subtypes',
-        \'r:records',
-        \'C:components',
-        \'P:packages',
-        \'l:locals',
-        \'s:signals'
-    \]
-\}
 
