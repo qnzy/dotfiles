@@ -2,6 +2,20 @@
 "au BufWritePost .vimrc so ~/.vimrc
 
 set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+
+Bundle 'christoomey/vim-tmux-navigator'
+Bundle 'jpalardy/vim-slime'
+Bundle 'tpope/vim-fugitive'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'scrooloose/syntastic'
+Bundle 'scrooloose/nerdtree'
+Bundle 'kovisoft/paredit'
+Bundle 'michaeljsmith/vim-indent-object'
+
+filetype on
 
 let mapleader="," " leader is comma
 syntax enable " enable syntax highlighting
@@ -108,17 +122,13 @@ nnoremap <C-l> <C-w>l
 set list
 set listchars=tab:>.,trail:.,extends:#,nbsp:.
 
-" pathogen
-call pathogen#infect()
-call pathogen#helptags()
-
 " colorscheme
 set background=dark
 let g:solarized_termtrans=1
 let g:solarized_termcolors=256
 let g:solarized_contrast="high"
 let g:solarized_visibility="high"
-colorscheme solarized
+"colorscheme solarized
 " color solarized
 " highlight Pmenu guibg=brown gui=bold
 " hi Pmenu guifg=#000000 guibg=#F8F8F8 ctermfg=black ctermbg=Lightgray
