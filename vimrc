@@ -2,10 +2,10 @@
 "au BufWritePost .vimrc so ~/.vimrc
 
 set nocompatible
+
 filetype off
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
-
 Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'jpalardy/vim-slime'
 Bundle 'tpope/vim-fugitive'
@@ -39,24 +39,10 @@ set autoindent
 "set smartindent
 set cindent
 
-"chicken scheme
-let g:is_chicken=1
-
 "vim-slime config
 let g:slime_target="tmux"
 let g:slime_python_ipython=1
-let g:slime_paset_file = "$HOME/.slime_pase"
 let g:slime_default_config = {"socket_name":"default","target_pane":"1"}
-
-" CtrlP settings
-"let g:ctrlp_max_files=0
-"let g:ctrlp_map = '<c-p>'
-"let g:ctrlp_cmd = 'CtrlP'
-"let g:ctrlp_by_filename = 1
-"let g:ctrlp_match_window = 'bottom,order:ttb'
-"let g:ctrlp_switch_buffer = 0
-"let g:ctrlp_working_path_mode = 0
-"let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 
 " YCM settings
 "let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
@@ -114,10 +100,6 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" set list listchars=tab:\ \ ,trail:·
-set list
-set listchars=tab:>.,trail:.,extends:#,nbsp:.
-
 " colorscheme
 set background=dark
 let g:solarized_termtrans=1
@@ -135,3 +117,4 @@ let g:solarized_visibility="high"
 " highlight PmenuSbar ctermbg=7 guibg=DarkGray
 " highlight PmenuThumb guibg=Black
 
+autocmd BufNewFile,BufRead *.sld set filetype=scheme
