@@ -38,6 +38,7 @@ set smartcase
 set autoindent
 "set smartindent
 set cindent
+set laststatus=2
 
 "vim-slime config
 let g:slime_target="tmux"
