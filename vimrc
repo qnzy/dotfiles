@@ -4,20 +4,18 @@
 set nocompatible
 
 filetype off
-set rtp+=~/.vim/bundle/vundle
+set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#rc()
 Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'jpalardy/vim-slime'
 Bundle 'tpope/vim-fugitive'
 Bundle 'altercation/vim-colors-solarized'
-Bundle 'scrooloose/syntastic'
-Bundle 'scrooloose/nerdtree'
 Bundle 'kovisoft/paredit'
 Bundle 'michaeljsmith/vim-indent-object'
+Bundle 'scrooloose/syntastic'
 
 filetype on
 
-let mapleader="," " leader is comma
 syntax enable " enable syntax highlighting
 
 set hidden " allow hidden unsaved buffers
@@ -39,61 +37,27 @@ set autoindent
 "set smartindent
 set cindent
 set laststatus=2
+set hlsearch " highlight matches
+set incsearch " incremental search
 
 "vim-slime config
 let g:slime_target="tmux"
 let g:slime_python_ipython=1
 let g:slime_default_config = {"socket_name":"default","target_pane":"1"}
 
-" YCM settings
-"let g:ycm_global_ycm_extra_conf = "~/.vim/.ycm_extra_conf.py"
-"let g:ycm_confirm_extra_conf = 0
-"autocmd CompleteDone * pclose
-
 " Syntastic settings
-let g:syntastic_check_on_open =1
-let g:syntastic_aggregate_errors = 1
-let g:syntastic_c_compiler = 'clang'
-let g:syntastic_c_compiler_options='--analyze'
-let g:syntastic_c_checkers=['gcc','cppcheck','splint']
-let g:syntastic_cpp_checkers=['gcc','cppcheck']
-let g:syntastic_python_checkers=['pylint','pyflakes']
-let g:syntastic_vhdl_checkers=['ghdl']
-let g:syntastic_html_checkers=['tidy']
-let g:syntastic_tex_checkers=['chktex']
-let g:syntastic_javascript_checkers = ['jshint']
-let g:syntastic_enable_signs = 0
-
-" move vertically by visual line
-nnoremap j gj
-noremap k gk
-
-" quick escape
-inoremap jk <esc>
-
-" replace word under cursor
-:nnoremap <leader>s :%s/\<<C-r><C-w>\>//g<Left><Left>
-
-" remove search highlighting
-nnoremap <leader><space> :nohlsearch<CR>
-set hlsearch " highlight matches
-set incsearch " incremental search
-
-" toggle NerdTree
-nnoremap <leader>e :NERDTreeToggle<CR>
-
-" toggle quickfix
-nnoremap <leader>q :cw<CR>
-
-" save, make, quickfix
-nnoremap <leader>m :w\|silent make\|redraw!\|cw<CR>
-
-" switch buffer (use tab expand)
-nnoremap <leader>, :buf 
-
-" better indent
-vnoremap < <gv 
-vnoremap > >gv
+"let g:syntastic_check_on_open =1
+"let g:syntastic_aggregate_errors = 1
+"let g:syntastic_c_compiler = 'clang'
+"let g:syntastic_c_compiler_options='--analyze'
+"let g:syntastic_c_checkers=['gcc','cppcheck','splint']
+"let g:syntastic_cpp_checkers=['gcc','cppcheck']
+"let g:syntastic_python_checkers=['pylint','pyflakes']
+"let g:syntastic_vhdl_checkers=['ghdl']
+"let g:syntastic_html_checkers=['tidy']
+"let g:syntastic_tex_checkers=['chktex']
+"let g:syntastic_javascript_checkers = ['jshint']
+"let g:syntastic_enable_signs = 0
 
 " easy split navigation
 nnoremap <C-h> <C-w>h
@@ -103,19 +67,6 @@ nnoremap <C-l> <C-w>l
 
 " colorscheme
 set background=dark
-let g:solarized_termtrans=1
-let g:solarized_termcolors=256
-let g:solarized_contrast="high"
-let g:solarized_visibility="high"
-"colorscheme solarized
-" color solarized
-" highlight Pmenu guibg=brown gui=bold
-" hi Pmenu guifg=#000000 guibg=#F8F8F8 ctermfg=black ctermbg=Lightgray
-" hi PmenuSbar guifg=#8A95A7 guibg=#F8F8F8 gui=NONE ctermfg=darkcyan ctermbg=lightgray cterm=NONE
-" hi PmenuThumb guifg=#F8F8F8 guibg=#8A95A7 gui=NONE ctermfg=lightgray ctermbg=darkcyan cterm=NONE
-" highlight Pmenu ctermbg=13 guibg=DarkBlue
-" highlight PmenuSel ctermbg=7 guibg=DarkBlue guifg=LightBlue
-" highlight PmenuSbar ctermbg=7 guibg=DarkGray
-" highlight PmenuThumb guibg=Black
+colorscheme solarized
 
 autocmd BufNewFile,BufRead *.sld set filetype=scheme

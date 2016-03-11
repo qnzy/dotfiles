@@ -1,4 +1,4 @@
-SESSIONNAME="VIMREPL"
+SESSIONNAME="TVIM"
 tmux has-session -t $SESSIONNAME > /dev/null
 if [ $? != 0 ]
     then
