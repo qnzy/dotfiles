@@ -7,8 +7,8 @@ alias cd..='cd ..'
 alias code='cd ~/code'
 alias cppcheck='cppcheck --enable=style -q'
 alias dropbox='~/.dropbox-dist/dropboxd'
-alias kawa="java -cp ~/opt/kawa-2.0.jar -Dkawa.import.path="./*.sld:." kawa.repl --r7rs"
-alias chibi="chibi-scheme -R"
+alias kawa="java -cp ~/opt/kawa-2.1.jar -Dkawa.import.path="./*.sld:." kawa.repl --r7rs"
+#alias chibi="chibi-scheme -R"
 #alias android-connect='mtpfs -o allow_other /media/Nexus'
 #alias android-disconnect='fusermount -u /media/Nexus'
 #alias check50="/usr/bin/nodejs ~/cs50/check50-master/SOURCES/opt/check50/bin/check50.js"

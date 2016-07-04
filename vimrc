@@ -6,7 +6,7 @@ set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim/
 call vundle#rc()
-Bundle 'christoomey/vim-tmux-navigator'
+"Bundle 'christoomey/vim-tmux-navigator'
 Bundle 'jpalardy/vim-slime'
 Bundle 'tpope/vim-fugitive'
 Bundle 'altercation/vim-colors-solarized'
@@ -46,27 +46,23 @@ let g:slime_python_ipython=1
 let g:slime_default_config = {"socket_name":"default","target_pane":"1"}
 
 " Syntastic settings
-"let g:syntastic_check_on_open =1
-"let g:syntastic_aggregate_errors = 1
-"let g:syntastic_c_compiler = 'clang'
-"let g:syntastic_c_compiler_options='--analyze'
-"let g:syntastic_c_checkers=['gcc','cppcheck','splint']
-"let g:syntastic_cpp_checkers=['gcc','cppcheck']
-"let g:syntastic_python_checkers=['pylint','pyflakes']
-"let g:syntastic_vhdl_checkers=['ghdl']
-"let g:syntastic_html_checkers=['tidy']
-"let g:syntastic_tex_checkers=['chktex']
-"let g:syntastic_javascript_checkers = ['jshint']
-"let g:syntastic_enable_signs = 0
-
-" easy split navigation
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+let g:syntastic_check_on_open =1
+let g:syntastic_aggregate_errors = 1
+let g:syntastic_c_compiler = 'clang'
+let g:syntastic_c_compiler_options='--analyze'
+let g:syntastic_c_checkers=['gcc','cppcheck','splint']
+let g:syntastic_cpp_checkers=['gcc','cppcheck']
+let g:syntastic_python_checkers=['pylint','pyflakes']
+let g:syntastic_vhdl_checkers=['ghdl']
+let g:syntastic_html_checkers=['tidy']
+let g:syntastic_tex_checkers=['chktex']
+let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_enable_signs = 0
 
 " colorscheme
 set background=dark
 colorscheme solarized
 
 autocmd BufNewFile,BufRead *.sld set filetype=scheme
+
+map ,e :e <C-R>=expand("%:p:h") . "/" <CR>
