@@ -65,4 +65,7 @@ colorscheme solarized
 
 autocmd BufNewFile,BufRead *.sld set filetype=scheme
 
+nnoremap <Tab> :bnext<CR>
+nnoremap <S-Tab> :bprevious<CR>
+ 
 map ,e :e <C-R>=expand("%:p:h") . "/" <CR>
