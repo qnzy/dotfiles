@@ -57,7 +57,8 @@ let g:syntastic_vhdl_checkers=['ghdl']
 let g:syntastic_html_checkers=['tidy']
 let g:syntastic_tex_checkers=['chktex']
 let g:syntastic_javascript_checkers = ['jshint']
-let g:syntastic_enable_signs = 0
+"let g:syntastic_enable_signs = 0
+let g:syntastic_enable_signs = 1
 
 " colorscheme
 set background=dark
