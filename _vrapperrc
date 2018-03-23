@@ -1,0 +1,12 @@
+set ignorecase
+set smartcase
+set incsearch
+set tabstop=4
+set shifwidth=4
+
+eclipseaction! eclipsecmdsearch org.eclipse.ui.window.quickAccess
+nnoremap <tab> :eclipsecmdsearch<cr>
+
+eclipseuiaction! showRulerAnnotationInformation org.eclipse.ui.edit.text.showRulerAnnotationInformation
+nnoremap 1 :showRulerAnnotationInformation<cr>
+
