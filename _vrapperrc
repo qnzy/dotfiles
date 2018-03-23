@@ -3,8 +3,6 @@
 set ignorecase
 set smartcase
 set incsearch
-set tabstop=4
-set shifwidth=4
 
 eclipseaction! quickAccess org.eclipse.ui.window.quickAccess
 nnoremap <tab> :quickAccess<cr>
