@@ -5,8 +5,15 @@ set smartcase
 set incsearch
 
 eclipseaction! quickAccess org.eclipse.ui.window.quickAccess
-nnoremap <tab> :quickAccess<cr>
-
+eclipseaction! OpenDeclaration org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclaration
 eclipseuiaction! showRulerAnnotationInformation org.eclipse.ui.edit.text.showRulerAnnotationInformation
+eclipseaction! FindReferences org.eclipse.xtext.ui.editor.FindReferences
+eclipseaction! NetSearch com.sigasi.hdt.vhdl.ui.editor.search.NetSearch
+eclipseaction! ToggleCommentAction org.eclipse.xtext.ui.ToggleCommentAction
+
+nnoremap <tab> :quickAccess<cr>
+nnoremap gd :OpenDeclaration<cr>
 nnoremap 1 :showRulerAnnotationInformation<cr>
+nnoremap gcc :ToggleCommentAction<cr>
+vnoremap gcc :ToggleCommentAction<cr>
 
