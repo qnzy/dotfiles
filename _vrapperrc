@@ -12,6 +12,7 @@ set contentassistmode
 set startnormalmode
 
 eclipseaction! quickAccess org.eclipse.ui.window.quickAccess
+eclipseuiaction! openResource org.eclipse.ui.navigate.openResource
 eclipseaction! OpenDeclaration org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclaration
 eclipseuiaction! showRulerAnnotationInformation org.eclipse.ui.edit.text.showRulerAnnotationInformation
 eclipseaction! ToggleCommentAction org.eclipse.xtext.ui.ToggleCommentAction
@@ -24,4 +25,5 @@ nnoremap gd :OpenDeclaration<cr>
 nnoremap 1 :showRulerAnnotationInformation<cr>
 nnoremap gcc :ToggleCommentAction<cr>
 vnoremap gcc :ToggleCommentAction<cr>
+nnoremap <c-p> :openResource<cr>
 
