@@ -21,9 +21,10 @@ eclipseaction! FindReferences org.eclipse.xtext.ui.editor.FindReferences
 eclipseaction! NetSearch com.sigasi.hdt.vhdl.ui.editor.search.NetSearch
 
 nnoremap gd :OpenDeclaration<cr>
-nnoremap 1 :showRulerAnnotationInformation<cr>
+nnoremap <F4> :showRulerAnnotationInformation<cr>
 nnoremap gcc :ToggleCommentAction<cr>
 vnoremap gcc :ToggleCommentAction<cr>
 nnoremap <c-p> :openResource<cr>
 nnoremap <tab> :bnext<cr>
 nnoremap <s-tab> :bprev<cr>
+
