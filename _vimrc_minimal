@@ -1,4 +1,4 @@
-" yek minimal vimrc
+" yek minimal vimrc for plain vim
 
 set nocompatible
 filetype on
