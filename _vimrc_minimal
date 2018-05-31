@@ -21,6 +21,6 @@ set cindent
 set laststatus=2
 set hlsearch " highlight matches
 set incsearch " incremental search
-colorscheme slate
+colorscheme desert
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
