@@ -1,0 +1,26 @@
+" yek minimal vimrc
+
+set nocompatible
+filetype on
+syntax enable " enable syntax highlighting
+set hidden " allow hidden unsaved buffers
+set tabstop=4 " number of visual spaces per TAB
+set softtabstop=4 " number of spaces in tab when editing
+set expandtab " tabs are spaces
+set shiftwidth=4 " indentation
+set number " show line numbers
+set showcmd " show command in bottom bar
+set cursorline " highlight current line
+set wildmenu " visual autocomplete
+set showmatch " highlight matching [{()}]
+set tags=./tags,tags;
+set ignorecase
+set smartcase
+set autoindent
+set cindent
+set laststatus=2
+set hlsearch " highlight matches
+set incsearch " incremental search
+colorscheme slate
+nnoremap <Tab> :bnext<CR>
+nnoremap <S-Tab> :bprevious<CR>
