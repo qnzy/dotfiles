@@ -22,6 +22,7 @@ set laststatus=2
 set hlsearch " highlight matches
 set incsearch " incremental search
 set backspace=2
+set ruler
 colorscheme desert
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
