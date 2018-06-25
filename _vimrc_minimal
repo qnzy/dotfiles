@@ -1,7 +1,7 @@
 " yek minimal vimrc for plain vim
+" use :echo $MYVIMRC to show location
 
-set nocompatible
-filetype on
+set nocompatible " don't be vi compatible
 syntax enable " enable syntax highlighting
 set hidden " allow hidden unsaved buffers
 set tabstop=4 " number of visual spaces per TAB
@@ -13,16 +13,18 @@ set showcmd " show command in bottom bar
 set cursorline " highlight current line
 set wildmenu " visual autocomplete
 set showmatch " highlight matching [{()}]
-set tags=./tags,tags;
-set ignorecase
-set smartcase
-set autoindent
-set cindent
-set laststatus=2
+set tags=./tags,tags; " look for tags file, go up hierarchy
+set ignorecase " case insensitive
+set smartcase " case sensitive only when using uppercase
+set autoindent " copy indentation to next line
+set laststatus=2 " always display statusline
 set hlsearch " highlight matches
 set incsearch " incremental search
-set backspace=2
-set ruler
-colorscheme desert
-nnoremap <Tab> :bnext<CR>
-nnoremap <S-Tab> :bprevious<CR>
+set backspace=2 " make backspace work
+set ruler " show cursor position
+noremap <silent> j gj" move in wrapped lines
+noremap <silent> k gk" move in wrapped lines
+filetype plugin indent on " enable filetype based settings
+colorscheme desert " default vim colorscheme
+nnoremap <Tab> :bnext<CR> " move to next buffer on tab
+nnoremap <S-Tab> :bprevious<CR> " move to previous buffer on shift-tab
