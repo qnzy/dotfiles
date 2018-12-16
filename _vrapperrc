@@ -1,0 +1,30 @@
+" _vrapperrc
+
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+set number
+set cursorline
+set tabstop=4
+set expandtab
+set contentassistmode
+set startnormalmode
+
+eclipseuiaction! openResource org.eclipse.ui.navigate.openResource
+eclipseaction! OpenDeclaration org.eclipse.xtext.ui.editor.hyperlinking.OpenDeclaration
+eclipseuiaction! showRulerAnnotationInformation org.eclipse.ui.edit.text.showRulerAnnotationInformation
+eclipseaction! ToggleCommentAction org.eclipse.xtext.ui.ToggleCommentAction
+" not mapped
+eclipseaction! quickAccess org.eclipse.ui.window.quickAccess
+eclipseaction! FindReferences org.eclipse.xtext.ui.editor.FindReferences
+eclipseaction! NetSearch com.sigasi.hdt.vhdl.ui.editor.search.NetSearch
+
+nnoremap gd :OpenDeclaration<cr>
+nnoremap <F4> :showRulerAnnotationInformation<cr>
+nnoremap gcc :ToggleCommentAction<cr>
+vnoremap gcc :ToggleCommentAction<cr>
+nnoremap <c-p> :openResource<cr>
+nnoremap <tab> :bnext<cr>
+nnoremap <s-tab> :bprev<cr>
+

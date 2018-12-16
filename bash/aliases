@@ -12,3 +12,5 @@ alias kawa="java -cp ~/opt/kawa-2.1.jar -Dkawa.import.path="./*.sld:." kawa.repl
 #alias android-connect='mtpfs -o allow_other /media/Nexus'
 #alias android-disconnect='fusermount -u /media/Nexus'
 #alias check50="/usr/bin/nodejs ~/cs50/check50-master/SOURCES/opt/check50/bin/check50.js"
+#alias ffind '~ykunz/bin/rg -L --files --no-messages | ~ykunz/bin/fzf'
+#alias vgrep '~ykunz/bin/rg -HLi --no-messages -g "*.vhd"'
