@@ -65,6 +65,7 @@ set background=dark
 colorscheme solarized
 
 autocmd BufNewFile,BufRead *.sld set filetype=scheme
+autocmd FIleType * unlet! b:browsefilter
 
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
