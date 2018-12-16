@@ -4,17 +4,17 @@
 set nocompatible
 
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#rc()
-"Bundle 'christoomey/vim-tmux-navigator'
-Bundle 'jpalardy/vim-slime'
-Bundle 'tpope/vim-fugitive'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'kovisoft/paredit'
-Bundle 'michaeljsmith/vim-indent-object'
-Bundle 'scrooloose/syntastic'
-
+call plug#begin('~/.vim/plugged')
+Plug 'altercation/vim-colors-solarized'
+Plug 'jpalardy/vim-slime'
+Plug 'scrooloose/syntastic'
+Plug 'ctrlpvim/ctrlp.vim'
+"Plug 'tpope/vim-fugitive'
+"Plug 'kovisoft/paredit'
+call plug#end()
 filetype on
+
+
 
 syntax enable " enable syntax highlighting
 
@@ -39,11 +39,12 @@ set cindent
 set laststatus=2
 set hlsearch " highlight matches
 set incsearch " incremental search
+filetype plugin indent on " enable filetype based settings
 
 "vim-slime config
-let g:slime_target="tmux"
-let g:slime_python_ipython=1
-let g:slime_default_config = {"socket_name":"default","target_pane":"1"}
+"let g:slime_target="tmux"
+"let g:slime_python_ipython=1
+"let g:slime_default_config = {"socket_name":"default","target_pane":"1"}
 
 " Syntastic settings
 let g:syntastic_check_on_open =1
@@ -57,7 +58,6 @@ let g:syntastic_vhdl_checkers=['ghdl']
 let g:syntastic_html_checkers=['tidy']
 let g:syntastic_tex_checkers=['chktex']
 let g:syntastic_javascript_checkers = ['jshint']
-"let g:syntastic_enable_signs = 0
 let g:syntastic_enable_signs = 1
 
 " colorscheme
@@ -70,3 +70,4 @@ nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
  
 map ,e :e <C-R>=expand("%:p:h") . "/" <CR>
+
