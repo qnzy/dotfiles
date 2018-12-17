@@ -1,7 +1,7 @@
-" automatically reload vimrc when it's saved
-"au BufWritePost .vimrc so ~/.vimrc
+" use :echo $MYVIMRC to show location
 
 set nocompatible
+
 
 filetype off
 call plug#begin('~/.vim/plugged')
@@ -15,9 +15,7 @@ call plug#end()
 filetype on
 
 
-
 syntax enable " enable syntax highlighting
-
 set hidden " allow hidden unsaved buffers
 set tabstop=4 " number of visual spaces per TAB
 set softtabstop=4 " number of spaces in tab when editing
@@ -27,24 +25,30 @@ set number " show line numbers
 set showcmd " show command in bottom bar
 set cursorline " highlight current line
 set wildmenu " visual autocomplete
-" set lazyredraw " redraw only when we need to
 set showmatch " highlight matching [{()}]
-"set colorcolumn=80 " highlight colum 80
 set tags=./tags,tags;
 set ignorecase
 set smartcase
 set autoindent
-"set smartindent
-set cindent
 set laststatus=2
 set hlsearch " highlight matches
 set incsearch " incremental search
 filetype plugin indent on " enable filetype based settings
+set backspace=2 " make backspace work
+set ruler " show cursor position
+noremap <silent> j gj" move in wrapped lines
+noremap <silent> k gk" move in wrapped lines
+set nobackup " no backup file
+set noswapfile " no swap file
 
-"vim-slime config
-"let g:slime_target="tmux"
-"let g:slime_python_ipython=1
-"let g:slime_default_config = {"socket_name":"default","target_pane":"1"}
+"  ctrl-p config (use .ignore file to filter rg)
+let g:ctrlp_working_path_mode = 'a'
+let g:ctrlp_user_command = 'rg %s  --files --color=never'
+
+" vim-slime config
+let g:slime_target="tmux"
+let g:slime_python_ipython=1
+let g:slime_default_config = {"socket_name":"default","target_pane":"1"}
 
 " Syntastic settings
 let g:syntastic_check_on_open =1
