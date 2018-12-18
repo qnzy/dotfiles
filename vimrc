@@ -40,6 +40,8 @@ noremap <silent> j gj" move in wrapped lines
 noremap <silent> k gk" move in wrapped lines
 set nobackup " no backup file
 set noswapfile " no swap file
+set go=m " guioptions (m: menu, T: toolbar, r: scrollbar right)
+set lines=40 columns=110 " gvim size
 
 "  ctrl-p config (use .ignore file to filter rg)
 let g:ctrlp_working_path_mode = 'a'
