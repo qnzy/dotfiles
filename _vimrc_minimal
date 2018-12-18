@@ -31,3 +31,4 @@ nnoremap <S-Tab> :bprevious<CR> " move to previous buffer on shift-tab
 set nobackup " no backup file
 set noswapfile " no swap file
 set lines=40 columns=110
+

@@ -67,8 +67,12 @@ let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_enable_signs = 1
 
 " colorscheme
-set background=dark
-colorscheme solarized
+if has('gui_running')
+    set background=dark
+    colorscheme solarized
+else
+    colorscheme desert " default vim colorscheme
+endif
 
 autocmd BufNewFile,BufRead *.sld set filetype=scheme
 autocmd FIleType * unlet! b:browsefilter
