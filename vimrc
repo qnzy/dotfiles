@@ -45,7 +45,10 @@ set lines=40 columns=110 " gvim size
 
 "  ctrl-p config (use .ignore file to filter rg)
 let g:ctrlp_working_path_mode = 'a'
-let g:ctrlp_user_command = 'rg %s  --files --color=never'
+if executable('rg')
+    let g:ctrlp_user_command = 'rg %s  --files --color=never'
+    let g:ctrlp_use_caching = 0
+endif
 
 " vim-slime config
 let g:slime_target="tmux"
