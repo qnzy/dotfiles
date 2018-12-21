@@ -85,3 +85,7 @@ nnoremap <S-Tab> :bprevious<CR>
  
 map ,e :e <C-R>=expand("%:p:h") . "/" <CR>
 
+autocmd FileType vhdl inoremap <buffer>.. =>
+autocmd FileType vhdl inoremap <buffer>,, <=
+autocmd FileType vhdl inoremap <buffer>--- ----------------------------------------------------------------
+
