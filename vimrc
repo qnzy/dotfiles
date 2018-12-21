@@ -51,9 +51,14 @@ if executable('rg')
 endif
 
 " vim-slime config
-let g:slime_target="tmux"
 let g:slime_python_ipython=1
-let g:slime_default_config = {"socket_name":"default","target_pane":"1"}
+if has("win32")
+    let g:slime_target="conemu"
+    let g:slime_default_config = {"HWND":0}
+else
+    let g:slime_target="tmux"
+    let g:slime_default_config = {"socket_name":"default","target_pane":"1"}
+endif
 
 " Syntastic settings
 let g:syntastic_check_on_open =1
@@ -85,7 +90,7 @@ nnoremap <S-Tab> :bprevious<CR>
  
 map ,e :e <C-R>=expand("%:p:h") . "/" <CR>
 
-autocmd FileType vhdl inoremap <buffer>.. =>
-autocmd FileType vhdl inoremap <buffer>,, <=
+autocmd FileType vhdl inoremap <buffer>.. => 
+autocmd FileType vhdl inoremap <buffer>,, <= 
 autocmd FileType vhdl inoremap <buffer>--- ----------------------------------------------------------------
 
