@@ -1,0 +1,32 @@
+snippet ieee
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.NUMERIC_STD.ALL;
+endsnippet
+
+
+snippet entity
+ENTITY $1 IS
+    GENERIC(
+        -- Parameters of Axi Slave Bus Interface S00_AXI
+        GENERIC1 : integer := 1;
+        GENERIC2 : integer := 2
+    );
+    PORT(
+        port1  : IN  std_logic;
+        port2  : OUT std_logic
+    );
+END $1;
+endsnippet
+
+snippet sproc
+    $1 : PROCESS ($2)
+    BEGIN
+        IF rising_edge($2) THEN
+            IF $3 = '0' THEN
+            ELSE
+            END IF;
+        END IF;
+    END PROCESS $1;
+endsnippet
+

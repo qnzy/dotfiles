@@ -11,6 +11,7 @@ Plug 'scrooloose/syntastic'
 Plug 'ctrlpvim/ctrlp.vim'
 "Plug 'tpope/vim-fugitive'
 "Plug 'kovisoft/paredit'
+Plug 'sirver/UltiSnips'
 call plug#end()
 filetype on
 
@@ -73,6 +74,11 @@ let g:syntastic_html_checkers=['tidy']
 let g:syntastic_tex_checkers=['chktex']
 let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_enable_signs = 1
+
+" Ultisnip
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsListSnippets="<c-tab>"
+let g:UltiSnipsSnippetsDirectories=["UltiSnips"]
 
 " colorscheme
 if has('gui_running')
