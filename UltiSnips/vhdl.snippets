@@ -6,7 +6,7 @@ endsnippet
 
 
 snippet entity
-ENTITY $1 IS
+ENTITY ${1:entity_name} IS
     GENERIC(
         -- Parameters of Axi Slave Bus Interface S00_AXI
         GENERIC1 : integer := 1;
@@ -20,10 +20,10 @@ END $1;
 endsnippet
 
 snippet sproc
-    $1 : PROCESS ($2)
+    ${1:proc_name} : PROCESS (${2:clk})
     BEGIN
         IF rising_edge($2) THEN
-            IF $3 = '0' THEN
+            IF ${3:rstn} = '0' THEN
             ELSE
             END IF;
         END IF;
