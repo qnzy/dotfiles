@@ -12,7 +12,6 @@ endsnippet
 snippet entity "entity declaration"
 ENTITY ${1:entity_name} IS
     GENERIC(
-        -- Parameters of Axi Slave Bus Interface S00_AXI
         GENERIC1 : integer := 1;
         GENERIC2 : integer := 2
     );
@@ -54,3 +53,10 @@ snippet state "state type definition"
 type ${1:state_type} is (${2:st_a, st_b});
 endsnippet
 
+snippet sl "std_logic"
+std_logic
+endsnippet
+
+snippet slv "std_logic_vector"
+std_logic_vector
+endsnippet
