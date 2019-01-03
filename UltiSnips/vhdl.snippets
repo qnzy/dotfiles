@@ -1,11 +1,15 @@
-snippet ieee
+snippet ieee "IEEE libraries"
 LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
 USE IEEE.NUMERIC_STD.ALL;
 endsnippet
 
+snippet xpmlib "XPM library"
+LIBRARY xpm;
+USE xpm.vcomponents.ALL;
+endsnippet
 
-snippet entity
+snippet entity "entity declaration"
 ENTITY ${1:entity_name} IS
     GENERIC(
         -- Parameters of Axi Slave Bus Interface S00_AXI
@@ -17,9 +21,13 @@ ENTITY ${1:entity_name} IS
         port2  : OUT std_logic
     );
 END $1;
+
+ARCHITECTURE Behavioral OF $1 IS
+BEGIN
+END ARCHITECTURE;
 endsnippet
 
-snippet sproc
+snippet sproc "synchronous process"
     ${1:proc_name} : PROCESS (${2:clk})
     BEGIN
         IF rising_edge($2) THEN
@@ -28,5 +36,21 @@ snippet sproc
             END IF;
         END IF;
     END PROCESS $1;
+endsnippet
+
+snippet case "case statement"
+case ${1:expr} is
+	when choice1 => ;
+	when choice2 => ;
+	when others  => ;
+end case;
+endsnippet
+
+snippet array "array type definition"
+type ${1:array_type} is array (${2:integer range <>}) of ${3:unsigned(15 downto 0)};
+endsnippet
+
+snippet state "state type definition"
+type ${1:state_type} is (${2:st_a, st_b});
 endsnippet
 
