@@ -3,18 +3,20 @@
 set nocompatible
 
 
+" force python 3
+if has('python3')
+endif
+
 filetype off
 call plug#begin('~/.vim/plugged')
 Plug 'altercation/vim-colors-solarized'
 Plug 'jpalardy/vim-slime'
-Plug 'scrooloose/syntastic'
+"Plug 'scrooloose/syntastic'
 Plug 'ctrlpvim/ctrlp.vim'
-"Plug 'tpope/vim-fugitive'
-"Plug 'kovisoft/paredit'
-Plug 'sirver/UltiSnips'
+Plug 'tpope/vim-fugitive'
+Plug 'kovisoft/paredit'
 call plug#end()
 filetype on
-
 
 syntax enable " enable syntax highlighting
 set hidden " allow hidden unsaved buffers
@@ -62,23 +64,18 @@ else
 endif
 
 " Syntastic settings
-let g:syntastic_check_on_open =1
-let g:syntastic_aggregate_errors = 1
-let g:syntastic_c_compiler = 'clang'
-let g:syntastic_c_compiler_options='--analyze'
-let g:syntastic_c_checkers=['gcc','cppcheck','splint']
-let g:syntastic_cpp_checkers=['gcc','cppcheck']
-let g:syntastic_python_checkers=['pylint','pyflakes']
-let g:syntastic_vhdl_checkers=['ghdl']
-let g:syntastic_html_checkers=['tidy']
-let g:syntastic_tex_checkers=['chktex']
-let g:syntastic_javascript_checkers = ['jshint']
-let g:syntastic_enable_signs = 1
-
-" Ultisnip
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsListSnippets="<c-tab>"
-let g:UltiSnipsSnippetsDirectories=["UltiSnips"]
+"let g:syntastic_check_on_open =1
+"let g:syntastic_aggregate_errors = 1
+"let g:syntastic_c_compiler = 'clang'
+"let g:syntastic_c_compiler_options='--analyze'
+"let g:syntastic_c_checkers=['gcc','cppcheck','splint']
+"let g:syntastic_cpp_checkers=['gcc','cppcheck']
+"let g:syntastic_python_checkers=['pylint','pyflakes']
+"let g:syntastic_vhdl_checkers=['ghdl']
+"let g:syntastic_html_checkers=['tidy']
+"let g:syntastic_tex_checkers=['chktex']
+"let g:syntastic_javascript_checkers = ['jshint']
+"let g:syntastic_enable_signs = 1
 
 " colorscheme
 if has('gui_running')
@@ -96,7 +93,7 @@ nnoremap <S-Tab> :bprevious<CR>
  
 map ,e :e <C-R>=expand("%:p:h") . "/" <CR>
 
-autocmd FileType vhdl inoremap <buffer>.. => 
-autocmd FileType vhdl inoremap <buffer>,, <= 
+autocmd FileType vhdl inoremap <buffer>.. <space>=> 
+autocmd FileType vhdl inoremap <buffer>,, <space><= 
 autocmd FileType vhdl inoremap <buffer>--- ----------------------------------------------------------------
 
