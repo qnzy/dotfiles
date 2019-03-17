@@ -90,6 +90,8 @@ autocmd FIleType * unlet! b:browsefilter
 
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
+
+nnoremap <F10> :!./go.sh<CR>
  
 map ,e :e <C-R>=expand("%:p:h") . "/" <CR>
 
