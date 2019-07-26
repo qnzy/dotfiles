@@ -22,13 +22,16 @@ set hlsearch " highlight matches
 set incsearch " incremental search
 set backspace=2 " make backspace work
 set ruler " show cursor position
-noremap <silent> j gj" move in wrapped lines
-noremap <silent> k gk" move in wrapped lines
 filetype plugin indent on " enable filetype based settings
 colorscheme desert " default vim colorscheme
-nnoremap <Tab> :bnext<CR> " move to next buffer on tab
-nnoremap <S-Tab> :bprevious<CR> " move to previous buffer on shift-tab
 set nobackup " no backup file
 set noswapfile " no swap file
-set lines=40 columns=110
+if has("gui_running")
+    set lines=40 columns=110 " gvim size
+endif
+noremap <silent> j gj" move in wrapped lines
+noremap <silent> k gk" move in wrapped lines
+nnoremap <Tab> :bnext<CR> " move to next buffer on tab
+nnoremap <S-Tab> :bprevious<CR> " move to previous buffer on shift-tab
+map ,e :e <C-R>=expand("%:p:h") . "/" <CR>
 
