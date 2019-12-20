@@ -97,6 +97,8 @@ nnoremap <S-Tab> :bprevious<CR>
 nnoremap <F10> :!./go.sh<CR>
  
 map ,e :e <C-R>=expand("%:p:h") . "/" <CR>
+map ,h :e %<.h<CR>
+map ,c :e %<.c<CR>
 
 autocmd FileType vhdl inoremap <buffer>.. <space>=> 
 autocmd FileType vhdl inoremap <buffer>,, <space><= 
