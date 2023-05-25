@@ -28,6 +28,7 @@ colorscheme desert " default vim colorscheme
 set nobackup " no backup file
 set noswapfile " no swap file
 set noeb vb t_vb=
+autocmd GUIEnter * set vb t_vb=
 if has("gui_running")
     set lines=40 columns=110 " gvim size
 endif
