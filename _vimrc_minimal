@@ -1,4 +1,3 @@
-  
 " yek minimal vimrc for plain vim
 " use :echo $MYVIMRC to show location
 
@@ -27,13 +26,14 @@ filetype plugin indent on " enable filetype based settings
 colorscheme desert " default vim colorscheme
 set nobackup " no backup file
 set noswapfile " no swap file
-set noeb vb t_vb=
-autocmd GUIEnter * set vb t_vb=
 if has("gui_running")
     set lines=40 columns=110 " gvim size
+    set visualbell t_vb=
 endif
 noremap <silent> j gj" move in wrapped lines
 noremap <silent> k gk" move in wrapped lines
 nnoremap <Tab> :bnext<CR> " move to next buffer on tab
 nnoremap <S-Tab> :bprevious<CR> " move to previous buffer on shift-tab
 map ,e :e <C-R>=expand("%:p:h") . "/" <CR>
+map ,p :cd %:p:h <CR>
+map ,l :!pdflatex % <CR>
