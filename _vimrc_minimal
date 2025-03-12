@@ -29,6 +29,7 @@ set noswapfile " no swap file
 if has("gui_running")
     set lines=40 columns=110 " gvim size
     set visualbell t_vb=
+    set novisualbell
 endif
 noremap <silent> j gj" move in wrapped lines
 noremap <silent> k gk" move in wrapped lines
